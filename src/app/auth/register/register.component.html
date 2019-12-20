@@ -1,0 +1,25 @@
+<form 
+    [formGroup]="registerForm"
+    (submit)="onSubmit()">
+    <div class="form-row">
+        <label for="email">Email:</label>
+        <input type="email" name="email" formControlName="email">
+    </div>
+    <div class="form-row">
+        <label for="name">Name:</label>
+        <input type="text" name="name" formControlName="name">
+    </div>
+    <div class="form-row">
+        <label for="password">Password:</label>
+        <input type="password" name="password" formControlName="password">
+    </div>
+    <div class="form-row">
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" name="confirm_password" formControlName="confirm_password">
+    </div>
+    <div class="form-row">
+        <button 
+            type="submit"
+            [disabled]="!registerForm.valid">Register!</button>
+    </div>
+</form>
